@@ -13,47 +13,50 @@ namespace Exercicio6
 
 
             string[] produto = new string[6];
-
+            double[] preco = new double[6];
 
             Console.Write("Digite o seu 1° produto: ");
             produto[0] = Console.ReadLine()!;
-            Console.Write("Digite o seu 2° produto: ");
-            produto[0] = Console.ReadLine()!;
-            Console.Write("Digite o seu 3° produto: ");
-            produto[0] = Console.ReadLine()!;
-            Console.Write("Digite o seu 4° produto: ");
-            produto[0] = Console.ReadLine()!;
-            Console.Write("Digite o seu 5° produto: ");
-            produto[0] = Console.ReadLine()!;
-            Console.Write("Digite o seu 6° produto: ");
-            produto[0] = Console.ReadLine()!;
-
-
-
-            double[] preco = new double[6];
             Console.WriteLine("Digite o 1° preço:");
             preco[0] = Convert.ToDouble(Console.ReadLine());
             Console.Write("\n");
+            Console.Write("Digite o seu 2° produto: ");
+            produto[0] = Console.ReadLine()!;
             Console.WriteLine("Digite o 2° preço");
             preco[1] = Convert.ToDouble(Console.ReadLine());
             Console.Write("\n");
+            Console.Write("Digite o seu 3° produto: ");
+            produto[0] = Console.ReadLine()!;
             Console.WriteLine("Digite o 3° preço");
             preco[2] = Convert.ToDouble(Console.ReadLine());
             Console.Write("\n");
+            Console.Write("Digite o seu 4° produto: ");
+            produto[0] = Console.ReadLine()!;
             Console.WriteLine("Digite o 4° preço");
             preco[3] = Convert.ToDouble(Console.ReadLine());
             Console.Write("\n");
+            Console.Write("Digite o seu 5° produto: ");
+            produto[0] = Console.ReadLine()!;
             Console.WriteLine("Digite o 5° preço");
             preco[4] = Convert.ToDouble(Console.ReadLine());
             Console.Write("\n");
+            Console.Write("Digite o seu 6° produto: ");
+            produto[0] = Console.ReadLine()!;
             Console.WriteLine("Digite o 6° preço");
             preco[5] = Convert.ToDouble(Console.ReadLine());
             Console.Write("\n");
 
 
-            Double menor = preco.Min();
-            Console.WriteLine($"O menor preço é {menor}");
+            double precoMaisBarato = preco.Min();
 
+            int posicaoMaisBarato = Array.IndexOf(preco, precoMaisBarato);
+
+            string produtoMaisBarato = produto[posicaoMaisBarato];
+
+            Console.WriteLine($@"
+            O Produto mais barato é: {produtoMaisBarato}
+            O Valor desse produto é: R${precoMaisBarato:F2}
+            ");
 
 
         }
